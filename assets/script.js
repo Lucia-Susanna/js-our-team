@@ -36,3 +36,28 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+const cardContainer = document.getElementById('cardContainer')
+let card = ''
+/* 
+1. prendo il card container in cui andrò a inserire le card che creo
+2. prendo l'array e estrapolo ogni singolo oggetto (ciclo for of)
+3. per ogni singolo oggetto vado a inserire i dati nel mockup html attraverso un template literal
+4. mi creo una stringa vuota in cui vado a concatenare tutte le card
+5 inserisco questa stringa nell'html del container
+*/
+
+for (member of teamMembers){
+  card += ` <div class="card">
+        <img src=./assets/${member['img']} alt="member">
+        <div>
+          <h3 class="name">${member['name']}</h3>
+          <p class="role">${member['role']}</p>
+          <p class="email">${member['email']}</p>
+        </div>
+      </div>`
+}
+
+console.log(card)
+
+cardContainer.innerHTML = card
