@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.flex{
+  display: flex;
+  flex-wrap: wrap
+}
+
+img{
+  width: 100%;
+}
+
+header{
+  text-align: center;
+  padding: 20px 120px;
+}  
+
+.card-container{
+  margin: 0 auto;
+  width: 80%;
+}
+
+.card{
+  width: calc(100%/3);
+  padding: 20px;
+}
