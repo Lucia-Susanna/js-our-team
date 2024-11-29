@@ -12,19 +12,63 @@
 
 img{
   width: 100%;
+  border-radius: 25px;
 }
 
 header{
   text-align: center;
   padding: 20px 120px;
+  background-color: rgb(155, 199, 226);
 }  
 
-.card-container{
-  margin: 0 auto;
+main{
+  background-color:rgb(203, 220, 231);
+  padding: 30px
+}
+
+.subtitle{
+  text-align: center;
   width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.card-container{
+  padding-top: 20px;
+  margin: 0 auto;
+  width: 70%;
 }
 
 .card{
   width: calc(100%/3);
   padding: 20px;
+  
+}
+.description{
+  background-color: rgb(245, 245, 234);
+  padding: 20px;
+  border-radius: 25px;
+} 
+
+.list-icon::before{
+  font-family: "Font Awesome 5 Free";
+  color: solid black;
+  font-size: .8rem;
+  font-weight: 900;
+}
+
+.name::before{
+  content: "\f007";
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+.role::before{
+  content: "\f0f2";
+  margin-right: 8px;
+}
+
+.email::before{
+  content: "\f0e0";
+  margin-right: 8px;
 }

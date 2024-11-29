@@ -4,24 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.css' integrity='sha512-gUmZC4CtgECJeVW1aeRk2AmpdQsl1ABsR8Cp4PmvANxm+TzwNNpe2MoJT/htbYsn0GR9+sIMDrd9vT9Pt0ZANA==' crossorigin='anonymous'/>
   <title>Document</title>
 </head>
 <body>
   <header>
     <h1 class="title">Meet our team</h1>
-    <p class="subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi odio, excepturi saepe illo ipsa quaerat omnis ea provident totam dolores labore perspiciatis minus vero deleniti distinctio similique tempora nam laudantium!</p>
   </header>
   <main>
+    <p class="subtitle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem laboriosam saepe exercitationem ipsum sapiente iste unde fugiat. Unde eaque mollitia commodi ex quisquam temporibus vel non est suscipit? Beatae, magni, aspernatur numquam tempore saepe quas eos in voluptate asperiores quidem exercitationem. Optio delectus fugiat eaque ex id, reiciendis ab impedit tenetur labore illo iste, quas accusantium debitis voluptas! Atque nam ab nihil fugit vero veniam assumenda asperiores minima dolore voluptates aspernatur soluta cum facilis, doloremque reiciendis odio. Voluptatibus, voluptate at. Id autem, quam veritatis quibusdam molestias beatae laboriosam nobis dicta.</p>
     <div id="cardContainer" class="div card-container flex">
       <div class="card">
         <img src="./assets/img/female1.png" alt="member">
-        <div>
-          <h3 class="name">Laura Rossi</h3>
+        <div class="description">
+          <h3 class="list-icon name">Laura Rossi</h3>
           <p class="role">Front-end developer</p>
           <p class="email">laurarossi@team.com</p>
         </div>
       </div>
     </div>
+    <form action="#">
+      <label for="new-name">inserisci il tuo nome</label>
+      <input type="text" id="new-name">
+      <label for="new-role">inserisci il tuo ruolo</label>
+      <input type="text" id="new-role">
+      <label for="new-email">inserisci il tuo indirizzo e-mail</label>
+      <input type="text" id="new-email">
+     
+      <button id="add" type="submit">Add</button>
+    </form>
   </main>
 
 

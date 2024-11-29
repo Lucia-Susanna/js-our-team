@@ -37,8 +37,6 @@ const teamMembers = [
   }
 ];
 
-const cardContainer = document.getElementById('cardContainer')
-let card = ''
 /* 
 1. prendo il card container in cui andrò a inserire le card che creo
 2. prendo l'array e estrapolo ogni singolo oggetto (ciclo for of)
@@ -46,18 +44,63 @@ let card = ''
 4. mi creo una stringa vuota in cui vado a concatenare tutte le card
 5 inserisco questa stringa nell'html del container
 */
+const cardContainer = document.getElementById('cardContainer')
 
-for (member of teamMembers){
-  card += ` <div class="card">
-        <img src=./assets/${member['img']} alt="member">
-        <div>
-          <h3 class="name">${member['name']}</h3>
-          <p class="role">${member['role']}</p>
-          <p class="email">${member['email']}</p>
-        </div>
-      </div>`
+// for (member of teamMembers){
+  //   card += ` <div class="card">
+  //         <img src=./assets/${member['img']} alt="member">
+  //         <div class="description">
+  //           <h3 class="list-icon name">${member['name']}</h3>
+  //           <p class="list-icon role">${member['role']}</p>
+  //           <p class="list-icon email">${member['email']}</p>
+  //         </div>
+  //       </div>`
+  // }
+
+  let card;
+  
+function newCard(array){
+  for(member of array){
+    card+= memberCard(member)  
+  }
+  return card
 }
 
-console.log(card)
+function memberCard(member){
 
-cardContainer.innerHTML = card
+  newMemberCard = ` <div class="card">
+  <img src=./assets/${member['img']} alt="member">
+  <div class="description">
+  <h3 class="list-icon name">${member['name']}</h3>
+  <p class="list-icon role">${member['role']}</p>
+  <p class="list-icon email">${member['email']}</p>
+  </div>
+  </div>`
+
+  return newMemberCard
+}
+
+
+cardContainer.innerHTML = newCard(teamMembers)
+
+
+
+
+
+
+ const addName = document.getElementById('new-name')
+ const addRole = document.getElementById('new-role')
+ const add = document.getElementById('add')
+ const addEmail = document.getElementById('new-email')
+ let newUser = {};
+
+newUser['name'] = addName.value
+newUser['role'] = addRole.value
+newUser['email'] = addEmail.value
+
+add.addEventListener ('click', ()=>{
+  event.preventDefault()
+  teamMembers.push(newUser)
+
+  cardContainer.innerHTML = newCard(teamMembers)
+})
