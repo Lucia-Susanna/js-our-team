@@ -30,13 +30,36 @@ main{
   text-align: center;
   width: 80%;
   margin: 0 auto;
-  padding-top: 20px;
+  margin: 20px;
 }
 
 .card-container{
   padding-top: 20px;
   margin: 0 auto;
   width: 70%;
+}
+
+.form-container{
+  width: 50%;
+  margin: 50px auto;
+  line-height: 2rem;
+  background-color: lightyellow;
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container input{
+  width: 100%;
+  height: 2rem;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.form-container button{
+  align-items: center;
+  
 }
 
 .card{
