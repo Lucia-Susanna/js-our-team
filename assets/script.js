@@ -57,9 +57,10 @@ const cardContainer = document.getElementById('cardContainer')
   //       </div>`
   // }
 
-  let card;
+
   
 function newCard(array){
+  let card= ''
   for(member of array){
     card+= memberCard(member)  
   }
