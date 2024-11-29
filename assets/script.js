@@ -68,7 +68,6 @@ function newCard(array){
 }
 
 function memberCard(member){
-
   newMemberCard = ` <div class="card">
   <img src=./assets/${member['img']} alt="member">
   <div class="description">
@@ -77,7 +76,6 @@ function memberCard(member){
   <p class="list-icon email">${member['email']}</p>
   </div>
   </div>`
-
   return newMemberCard
 }
 
@@ -86,18 +84,18 @@ cardContainer.innerHTML = newCard(teamMembers)
 
 
 
-
-
-
  const addName = document.getElementById('new-name')
  const addRole = document.getElementById('new-role')
- const add = document.getElementById('add')
  const addEmail = document.getElementById('new-email')
+ const addImg = document.getElementById('new-img')
+ const add = document.getElementById('add')
+
  let newUser = {};
 
 newUser['name'] = addName.value
 newUser['role'] = addRole.value
 newUser['email'] = addEmail.value
+newUser['img'] = addImg.value
 
 add.addEventListener ('click', ()=>{
   event.preventDefault()
@@ -105,3 +103,5 @@ add.addEventListener ('click', ()=>{
 
   cardContainer.innerHTML = newCard(teamMembers)
 })
+
+console.log(newUser)
